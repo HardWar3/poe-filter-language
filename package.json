@@ -2,7 +2,11 @@
   "name": "filter",
   "displayName": "PoE-Filter-language",
   "description": "PoE-Filter script language",
-  "version": "0.0.1",
+  "version": "0.5.0",
+  "repository": {
+    "url": "https://github.com/HardWar3/poe-filter-language",
+    "type": "git"
+  },
   "engines": {
     "vscode": "^1.84.0"
   },
