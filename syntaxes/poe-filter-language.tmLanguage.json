@@ -1,0 +1,176 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PoE-Filter-Language",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#operator"
+		},
+		{
+			"include": "#numbers"
+		}
+	],
+	"repository": {
+		"strings":{
+			"name": "string.quoted.double",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape",
+					"match": "\\\\."
+				}
+			]
+		},
+		"keywords":{
+			"patterns": [
+				{
+					"comment": "Blocks",
+					"name": "keyword.control",
+					"match": "\\b(Show|Minimal|Continue|Import)\\b"
+				},
+				{
+					"comment": "Blocks",
+					"name": "entity.name.function",
+					"match": "\\b(Hide)\\b"
+				},
+				{
+					"comment": "Conditions",
+					"name": "variable.parameter",
+					"match": "\\b(AlternateQuality|AnyEnchantment|ArchnemesisMod|AreaLevel|BaseArmour|BaseDefencePercentile|BaseEnergyShield|BaseEvasion|BaseType|BaseWard|BlightedMap|Class|Corrupted|CorruptedMods|DropLevel|ElderItem|ElderMap|EnchantmentPassiveNode|EnchantmentPassiveNum|FracturedItem|GemLevel|HasCruciblePassiveTree|HasEaterOfWorldsImplicit|HasEnchantment|HasExplicitMod|HasImplicitMod|HasInfluence|HasSearingExarchImplicit|Height|Identified|ItemLevel|LinkedSockets|MapTier|Mirrored|Quality|Rarity|Replica|Scourged|ShapedMap|ShaperItem|SocketGroup|Sockets|StackSize|SynthesisedItem|UberBlightedMap|Width|TransfiguredGem)\\b"
+				},
+				{
+					"comment": "Actions",
+					"name": "variable.parameter",
+					"match": "\\b(PlayAlertSound|PlayAlertSoundPositional|CustomAlertSound|CustomAlertSoundOptional|DisableDropSound|EnableDropSound|DisableDropSoundIfAlertSound|EnableDropSoundIfAlertSound)\\b"
+				},
+				{
+					"comment": "Other Actions",
+					"name": "variable.parameter",
+					"match": "\\b(MinimapIcon|PlayEffect|SetBackgroundColor|SetBorderColor|SetFontSize|SetTextColor)\\b"
+				},
+				{
+					"comment": "boolean",
+					"name": "constant.character",
+					"match": "\\b(True|true|False|false)\\b"
+				},
+				{
+					"comment": "colors",
+					"name": "constant.character",
+					"match": "\\b(Red|Green|Blue|Brown|White|Yellow|Cyan|Grey|Orange|Pink|Purple)\\b"
+				},
+				{
+					"comment": "geometric shape",
+					"name": "constant.character",
+					"match": "\\b(Circle|Diamond|Hexagon|Square|Star|Triangle|Cross|Moon|Raindrop|Kite|Pentagon|UpsideDownHouse)\\b"
+				},
+				{
+					"comment": "Rarity",
+					"name": "constant.character",
+					"match": "\\b(Normal|Magic|Rare|Unique)\\b"
+				},
+				{
+					"comment": "After actions",
+					"name": "constant.character",
+					"match": "\\b(Temp|Optional)\\b"
+				},
+				{
+					"comment": "HasInfluence Value",
+					"name": "constant.character",
+					"match": "\\b(Shaper|Elder|Crusader|Hunter|Redeemer|Warlord|None)\\b"
+				},
+				{
+					"comment": "Item Class One Handed Weapons",
+					"name": "constant.character",
+					"match": "\\b(Claws|Daggers|Wands|One Hand Swords|Thrusting One Hand Swords|One Hand Axes|One Hand Maces|Sceptres|Rune Daggers)\\b"
+				},
+				{
+					"comment": "Item Class Two Handed Weapons",
+					"name": "constant.character",
+					"match": "\\b(Bows|Staves|Two Hand Swords|Two Hand Axes|Two Hand Maces|Warstaves|Fishing Rods)\\b"
+				},
+				{
+					"comment": "Item Class Off-hand",
+					"name": "constant.character",
+					"match": "\\b(Quivers|Shields|Quiver|Shield)\\b"
+				},
+				{
+					"comment": "Item Class Armour",
+					"name": "constant.character",
+					"match": "\\b(Gloves|Boots|Body Armours|Helmets|Armour|Glove|Boot|Body Armour|Helmet)\\b"
+				},
+				{
+					"comment": "Item Class Jewellery",
+					"name": "constant.character",
+					"match": "\\b(Amulets|Amulet|Rings|Ring|Belts|Belt|Trinkets|Trinket)\\b"
+				},
+				{
+					"comment": "Item Class Jewels",
+					"name": "constant.character",
+					"match": "\\b(Jewels|Jewel|Abyss Jewels|Abyss Jewel|Cluster Jewels|Cluster Jewel|Timeless Jewels|Timeless Jewel)\\b"
+				},
+				{
+					"comment": "Item Class Flasks",
+					"name": "constant.character",
+					"match": "\\b(Flasks|Flask|Life Flasks|Life Flask|Mana Flasks|Mana Flask|Hybrid Flasks|Hybrid Flask|Utility Flasks|Utility Flask)\\b"
+				},
+				{
+					"comment": "Item Class Maps",
+					"name": "constant.character",
+					"match": "\\b(Map Fragments|Map Fragment|Misc Map Items|Misc Map Item|Memories|Memory|Scrab|Breachstone|Emblem|Lure|Delirium Orb|Sectant|Maps|Map)\\b"
+				},
+				{
+					"comment": "Item Class Gems",
+					"name": "constant.character",
+					"match": "\\b(Skill Gems|Skill Gem|Support Gems|Support Gem|Gems|Gem)\\b"
+				},
+				{
+					"comment": "Item Class Currency",
+					"name": "constant.character",
+					"match": "\\b(Currency|Stackable Currency|Oil|Fossil|Cataysts|Essence|Vial|Splinter|Blessing|Vault Key)\\b"
+				},
+				{
+					"comment": "Item Class Heist",
+					"name": "constant.character",
+					"match": "\\b(Contracts|Blueprints|Blueprint|Heist Gear|Heist Tools|Heist Tool|Heist Cloaks|Heist Cloak|Heist Brooches|Heist Brooch|Heist Targets|Heist Target|Experimented|Unusual Gems|Heist)\\b"
+				},
+				{
+					"comment": "Item Class Other",
+					"name": "constant.character",
+					"match": "\\b(Strongbox|League Specific|Replica|Hideouts|Hideout Doodads|Divination Cards|Divination|Pieces|Piece|Incubators|Incubator|Resonator|Expedition Logbook|Labyrinth Item|Delve|Pantheon Soul|Incursion Item)\\b"
+				},
+				{
+					"comment": "Item Class Other2",
+					"name": "constant.character",
+					"match": "\\b(Atlas Upgrade Item|Contract|Atlas Upgrade Item|Metamorph Sample|Incursion Items|Relic|Sanctum Research|Tincture|Charms|Charm|Corpses|Corpse)\\b"
+				}
+			]
+		},
+		"comments":{
+			"name":"comment.line.number-sign",
+			"begin": "(\\#)",
+			"end": "($)"
+		},
+		"operator":{
+			"patterns": [
+				{
+					"name":"keyword.operator",
+					"match": "=|!|<=|>=|<|>|=="
+				}
+			]
+		},
+		"numbers":{
+			"name":"constant.numeric",
+			"match": "\\b(\\d+)\\b"
+		}
+	},
+	"scopeName": "source.filter"
+}

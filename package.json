@@ -1,0 +1,25 @@
+{
+  "name": "filter",
+  "displayName": "PoE-Filter-language",
+  "description": "PoE-Filter script language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "poe-filter-language",
+      "aliases": ["PoE-Filter-Language", "poe-filter-language"],
+      "extensions": [".filter"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "poe-filter-language",
+      "scopeName": "source.filter",
+      "path": "./syntaxes/poe-filter-language.tmLanguage.json"
+    }]
+  }
+}
