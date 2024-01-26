@@ -1,8 +1,8 @@
 {
   "name": "path-of-exile-filter-language",
-  "displayName": "PoE-Filter-language",
+  "displayName": "PathofExile-Filter-language",
   "description": "a Path of Exile Filter script language",
-  "publisher": "MrHardWare",
+  "publisher": "MrHardWar3",
   "version": "0.5.0",
   "repository": {
     "url": "https://github.com/HardWar3/poe-filter-language",
